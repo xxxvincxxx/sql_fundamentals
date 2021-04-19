@@ -1,6 +1,5 @@
 ---
-title: "03.Aggregate_window_functions
-"
+title: "03.Aggregate_window_functions"
 output: github_document
 ---
 
