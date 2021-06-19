@@ -55,4 +55,24 @@ ORDER BY Country ASC, Year ASC;
 
 ```
 
+## `MIN()` Window function: **Running Totals** ❤️
+
+```{sql eval=FALSE}
+WITH France_Medals AS (
+  SELECT
+    Year, COUNT(*) AS Medals
+  FROM Summer_Medals
+  WHERE
+    Country = 'FRA'
+    AND Medal = 'Gold' AND Year >= 2000
+  GROUP BY Year)
+
+SELECT
+  year,
+  medals,
+  MIN(medals) OVER (ORDER BY year ASC) AS Min_Medals
+FROM France_Medals
+ORDER BY Year ASC;
+```
+
 
