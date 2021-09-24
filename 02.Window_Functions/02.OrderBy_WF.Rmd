@@ -80,8 +80,7 @@ WHERE
 
 ### `LAG`
 
-* 
-
+* LAG is a window function that takes a column and a number n and returns the column's value n rows **before** the current row. Passing 1 as n returns the previous row's value.
 
 ```{sql eval=FALSE}
 
