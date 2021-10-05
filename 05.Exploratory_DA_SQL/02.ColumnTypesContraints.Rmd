@@ -3,4 +3,15 @@ title: "Summarizing and aggregating numeric data"
 output: github_document
 ---
 
-## Casting
+## Distributions
+
+* `TRUNC()` vs. `ROUND()`
+* `generate_series(from,to,step)` -> to create bins
+
+## Correlation
+
+* A correlation coefficient can range from 1 to -1, with larger values indicating a stronger positive relationship, and more negative values indicating a stronger negative relationship.
+
+* The corr function takes the names of two columns as arguments and returns the correlation between them. *Rows with a null value in either column are excluded*
+
+## Median
