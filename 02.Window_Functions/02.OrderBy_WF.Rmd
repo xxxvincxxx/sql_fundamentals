@@ -56,6 +56,7 @@ ORDER BY Medals DESC;
 * The main difference is that the temporary table is a stored table. A CTE is more akin to a view, and helps you express your SQL in an easier to read, more logical way. The same differences apply between tables and views in that a table gives you the potential to do things in a performant way.
 
 * While `TEMP` table is **transient** only for the current session, `WITH` is always re-evaluated.
+* no?
 
 
 
