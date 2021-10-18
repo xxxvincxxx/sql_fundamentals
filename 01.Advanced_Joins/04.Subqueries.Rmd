@@ -63,13 +63,10 @@ ORDER BY urbanarea_pop DESC;
 ```
 
 
+### Within `SELECT` clause
+
+* Convert the `GROUP BY` code to use a subquery inside of `SELECT` by filling in the blanks to get a result that matches the one given using the `GROUP BY` code in the first query.
 
 
 
 
-
-
-
-### 1. Within `SELECT` clause
-
-test
