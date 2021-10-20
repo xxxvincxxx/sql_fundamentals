@@ -5,7 +5,8 @@ output: github_document
 
 ## ORDER BY
 
-* Assign a number to each year in which Summer Olympic games were held so that rows with the most recent years have lower row numbers.
+* `ORDER BY` is a subclause of `OVER`
+* It orders the rows related to the current row that the window function will use.
 
 
 ```{sql eval=FALSE}
@@ -20,8 +21,6 @@ FROM (
 ORDER BY Year;
 ```
 
-* `ORDER BY` is a subclause of `OVER`
-* It orders the rows related to the current row that the window function will use.
 
 ## Reigning champion
 
@@ -30,7 +29,8 @@ ORDER BY Year;
 * Enter `LAG`. `LAG` is a window function that takes a column and a number n and returns the column's value n rows before the current row. Passing 1 as n returns the previous row's value.
 
 ### CTE (Common Table Expressions)
-* `WITH` provides a way to write auxiliary statements for use in a larger query. These statements, which are often referred to as Common Table Expressions or CTEs, can be thought of as defining temporary tables that exist just for one query. 
+
+* `WITH` provides a way to write auxiliary statements for use in a larger query. These statements, which are often referred to as Common Table Expressions or **CTEs**, can be thought of as defining temporary tables that exist just for one query. (**JUST FOR ONE!**)
 
 * Having wrapped the previous query in the `Athlete_Medals` `CTE`, rank each athlete by the number of medals they've earned.
 
@@ -53,10 +53,57 @@ ORDER BY Medals DESC;
 
 * **Difference between `WITH` and `TEMP TABLE`*
 * -> Mostly a **memory** problem! <3 
-* The main difference is that the temporary table is a stored table. A CTE is more akin to a view, and helps you express your SQL in an easier to read, more logical way. The same differences apply between tables and views in that a table gives you the potential to do things in a performant way.
+
+* The main difference is that the temporary table is a stored table. A CTE is more akin to a *view*, and helps you express your SQL in an easier to read, more logical way. The same differences apply between tables and views in that a table gives you the potential to do things in a performant way.
 
 * While `TEMP` table is **transient** only for the current session, `WITH` is always re-evaluated.
-* no?
+
+### Reigning weightlifting champions
+ * A reigning champion is a champion who's won both the previous and current years' competitions. To determine if a champion is reigning, the previous and current years' results need to be in the same row, in two different columns.
+
+* Return each year's gold medalists in the Men's 69KG weightlifting competition.
+
+ ```{sql eval=FALSE}
+SELECT
+  -- Return each year's champions' countries
+  Year,
+  Country AS champion
+FROM Summer_Medals
+WHERE
+  Discipline = 'Weightlifting' AND
+  Event = '69KG' AND
+  Gender = 'Men' AND
+  Medal = 'Gold';
+```
+
+* Having wrapped the previous query in the Weightlifting_Gold **CTE**, get the previous year's champion for each year.
+
+```{sql eval=FALSE}
+
+-- This is basically like using a 
+-- temporary table - with memory problems:
+
+WITH Weightlifting_Gold AS (
+  SELECT
+    -- Return each year's champions' countries
+    Year,
+    Country AS champion
+  FROM Summer_Medals
+  WHERE
+    Discipline = 'Weightlifting' AND
+    Event = '69KG' AND
+    Gender = 'Men' AND
+    Medal = 'Gold')
+
+SELECT
+  Year, Champion,
+  -- Fetch the previous year's champion
+  LAG(Champion) OVER
+    (ORDER BY Year ASC) AS Last_Champion
+FROM Weightlifting_Gold
+ORDER BY Year ASC;
+```
+
 
 
 
