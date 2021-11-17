@@ -1,0 +1,67 @@
+---
+title: "Moving averages and totals"
+output: github_document
+---
+
+## Moving averages and totals
+
+* A moving average is the average of the last n periods of a column's values.
+* It catches momentum and trends; in sales, epidemiology.
+* Moving averages are also useful in eliminating seasonality, the normal fluctuation of units sold per day.
+
+## Moving total
+* the sum of the last n periods of a column's values. For example, the sum of the last 3 Olympic games' medals for any given set of Olympic games. It's used to indicate performance in the recent periods; if the sum is going down, overall performance is going down, and vice-versa.
+
+--> use `OVER`
+
+### Exercise 1 
+
+* Calculate the 3-year moving average of medals earned.
+
+```{sql eval=FALSE}
+WITH Russian_Medals AS (
+  SELECT
+    Year, COUNT(*) AS Medals
+  FROM Summer_Medals
+  WHERE
+    Country = 'RUS'
+    AND Medal = 'Gold'
+    AND Year >= 1980
+  GROUP BY Year)
+
+SELECT
+  Year, Medals,
+  --- Calculate the 3-year moving average of medals earned
+  AVG(Medals) OVER
+    (ORDER BY Year ASC
+     ROWS BETWEEN
+     2 preceding AND current row) AS Medals_MA
+FROM Russian_Medals
+ORDER BY Year ASC;
+```
+
+### Exercise 2
+
+* Calculate the 3-year moving sum of medals earned.
+
+```{sql eval=FALSE}
+WITH Country_Medals AS (
+  SELECT
+    Year, Country, COUNT(*) AS Medals
+  FROM Summer_Medals
+  GROUP BY Year, Country)
+
+SELECT
+  Year, Country, Medals,
+  -- Calculate each country's 3-game moving total
+  sum(Medals) OVER
+    (PARTITION BY Country
+     ORDER BY Year ASC
+     ROWS BETWEEN
+     2 preceding AND current row) AS Medals_MA
+FROM Country_Medals
+ORDER BY Country ASC, Year ASC;
+```
+
+
+
