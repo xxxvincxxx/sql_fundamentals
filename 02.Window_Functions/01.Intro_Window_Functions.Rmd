@@ -1,0 +1,16 @@
+---
+title: "Window Functions"
+output: github_document
+---
+
+## Window functions
+
+Window functions perform an operation across a set of rows that are somehow related to the current row, which is the row the window function's currently operating on. They're similar to `GROUP BY` aggregate functions in that they span multiple rows, but **instead of rows being grouped into a single row**, all rows remain in the **output**. 
+&nbsp;
+
+## Row numbers
+
+The most basic thing you can do with a window function is assign **row numbers**. 
+&nbsp;
+Row numbers allow you to reference a row by its position or index as opposed to its values. You can fetch the 5th row no matter what its values are, for example.
+
