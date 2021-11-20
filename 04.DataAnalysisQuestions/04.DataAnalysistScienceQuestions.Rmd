@@ -24,7 +24,9 @@ print(median.result)
 
    - Mode: the most frequent number in our data points
 
-If the data is normally distributed, then the values of mean, median, and mode are all identical, as you can see in the middle image above. If the data distribution is left-skewed, then the mean will be lower than the median. Meanwhile, if the data distribution is right-skewed, then the mean will be higher than the median.
+If the data is normally distributed, then the values of **mean, median, and mode are all identical**.
+* If the data distribution is **left-skewed**, then the mean < median. 
+* If **right-skewed**, then the mean > median.
 
 2. Measures of **Spread** (Standard Deviation and Variance)
 
@@ -36,6 +38,7 @@ If the data is normally distributed, then the values of mean, median, and mode a
 
 A correlation coefficient is an indicator of how strong the relationship between two variables is. A coefficient near +1 indicates a strong positive correlation, a coefficient of 0 indicates no correlation, and a coefficient near -1 indicates a strong negative correlation.
 
+* Correlation  ≠ Causation
 
 #### Linear Regression
 
@@ -84,6 +87,10 @@ A confounding variable is a factor that affects both the dependent and independe
 For example, there is a high correlation between ice cream purchases and forest fires. The number of forest fires and ice cream sales increases at the same time. This is because the confounding variable between them is heat. As temperature rises, so does ice cream sales and the risk of forest fires.
 
 &nbsp;
+
+#### Logistic Regression
+
+* Basically a Classification 
 
 ### A/B Testing
 
