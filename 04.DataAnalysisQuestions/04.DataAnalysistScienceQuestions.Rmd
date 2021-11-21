@@ -111,6 +111,15 @@ If the p-value is less than alpha, the null hypothesis is rejected, but if it is
 
 * **Sample size**
 
+* **Selection bias**
+Selection bias is a phenomenon that involves the selection of individual or grouped data in a way that is **not considered to be random**. 
+
+If correct randomization is not achieved, then the resulting sample will not accurately represent the population. -> ie Simpson's Paradox
+
+  - Attrition
+  - Time intervals
+  - Covid19 under-reporting
+
 * **Outliers**
 Outliers are data points that vary in a large way when compared to other observations in the dataset.
 
