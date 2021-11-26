@@ -9,7 +9,7 @@ output: github_document
 
 #### Exercise 1 
 
-* Begin by calculating the average life expectancy across all countries for 2015.
+* A. Begin by calculating the average life expectancy across all countries for 2015.
 
 ```{sql eval=FALSE}
 -- Select average life_expectancy
@@ -46,6 +46,27 @@ WHERE life_expectancy >
    WHERE year = 2015) AND
   year = 2015;```
 ```
+
+* B. Use your knowledge of subqueries in `WHERE` to get the urban area population for only capital cities.
+
+```{sql eval=FALSE}
+-- Select fields
+name, country_code, urbanarea_pop
+  -- From cities
+  From cities
+-- Where city name in the field of capital cities
+Where name IN
+  -- Subquery
+  (SELECT capital
+   FROM countries)
+ORDER BY urbanarea_pop DESC;
+```
+
+
+
+
+
+
 
 
 
