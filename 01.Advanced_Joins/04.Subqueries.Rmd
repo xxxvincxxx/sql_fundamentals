@@ -93,5 +93,17 @@ LIMIT 9;
 ### Within `FROM` clause
 #### **Exercise 3** 
 
+* Begin by determining for each country code how many languages are listed in the languages table using `SELECT`, `FROM`, and `GROUP BY`.
+
+```{sql eval=FALSE}
+-- Select fields (with aliases)
+SELECT code, COUNT(*) AS lang_num
+  -- From languages
+  FROM languages
+-- Group by code
+GROUP BY code;
+```
+
+
 
 
