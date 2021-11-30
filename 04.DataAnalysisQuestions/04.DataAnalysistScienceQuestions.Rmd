@@ -38,7 +38,9 @@ If the data is normally distributed, then the values of **mean, median, and mode
 
   - Range
   - Variance: The advantage of variance is that it treats all deviations from the mean as the same regardless of their direction
-  - Standard Deviation: -> square root
+  - Standard Deviation: -> square root:
+  Standard deviation represents the magnitude of how far the data points are from the mean. A low value of standard deviation is an indication of the data being close to the mean, and a high value indicates that the data is spread to extreme ends, far away from the mean.
+
   
 3. **Correlation Coefficient**
 
@@ -135,13 +137,12 @@ Outliers are data points that vary in a large way when compared to other observa
   - Interquartile range (IQR)
 
 
-
-
-
-
 * **Confidence interval**
 
 A confidence interval is a probability that the true population parameter falls between a range of two estimates.
+
+Significance level = 1 − Confidence level
+
 
 * **Confidence level**
 
