@@ -51,11 +51,11 @@ WHERE life_expectancy >
 
 ```{sql eval=FALSE}
 -- Select fields
-name, country_code, urbanarea_pop
+SELECT name, country_code, urbanarea_pop
   -- From cities
-  From cities
+  FROM cities
 -- Where city name in the field of capital cities
-Where name IN
+WHERE name IN
   -- Subquery
   (SELECT capital
    FROM countries)
