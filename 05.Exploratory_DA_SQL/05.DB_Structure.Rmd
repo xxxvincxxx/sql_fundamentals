@@ -3,28 +3,19 @@ title: "Exploratory Data Analysis in SQL"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Foreign keys
 
-## GitHub Documents
+* A foreign key is a column that references a single, specific row in the database. Foreign keys reference other rows using a unique identifier for the row. The unique `ID` often comes from a primary key column in the referenced table.
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+* Can be `NULL`
 
-## Including Code
+## Primary keys
+ 
+* Primary keys are specially designated columns where each row has a **unique, non-null value**.
 
-You can include R code in the document as follows:
+## Coalesce function
 
-```{r cars}
-summary(cars)
-```
+* The `COALESCE()` function operates row-wise on the input. It returns the first `non-NULL` value in each row, checking the columns in the order they're supplied to the function.
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
