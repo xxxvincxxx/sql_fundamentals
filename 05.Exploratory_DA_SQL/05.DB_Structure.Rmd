@@ -20,7 +20,7 @@ output: github_document
 * The `COALESCE()` function can be useful for specifying a default or backup value when a column contains `NULL` values.
   * `coalesce(NULL, 1, 2) = 1`
   * `coalesce(NULL, NULL) = NULL`
-  * coalesce(2, 3, NULL) = 2
+  * `coalesce(2, 3, NULL) = 2`
 
 
 
