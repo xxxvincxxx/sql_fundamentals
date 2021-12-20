@@ -78,6 +78,11 @@ WHERE
 
 * Having wrapped the previous query in the Weightlifting_Gold **CTE**, get the previous year's champion for each year.
 
+### `LAG`
+
+* 
+
+
 ```{sql eval=FALSE}
 
 -- This is basically like using a 
@@ -105,6 +110,9 @@ ORDER BY Year ASC;
 ```
 
 
+### `PARTITION BY`
+
+* 
 
 
 
