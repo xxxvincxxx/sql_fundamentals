@@ -5,3 +5,5 @@ usethis::browse_github_token()
 credentials::set_github_pat("R:GITHUB_PAT")
 
 usethis::edit_r_environ()
+
+# test
