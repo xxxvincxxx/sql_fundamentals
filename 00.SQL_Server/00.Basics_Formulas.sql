@@ -60,3 +60,26 @@ FROM
   -- Retrieve rows where the event_date was the 22nd December, 2013    
 WHERE 
   event_date = '2013-12-22';
+  
+-- Filter NULL
+
+-- Retrieve all columns
+SELECT 
+  * 
+FROM 
+  grid 
+  -- Return rows where demand_loss_mw is not missing or unknown   
+WHERE 
+  demand_loss_mw IS NULL;
+
+-- or "NOT NULL"
+
+-- Retrieve all columns
+SELECT 
+  * 
+FROM 
+  grid 
+  -- Return rows where demand_loss_mw is not missing or unknown   
+WHERE 
+  demand_loss_mw IS not NULL;
+
