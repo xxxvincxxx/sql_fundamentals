@@ -7,7 +7,7 @@ output: github_document
 
 ### Within `WHERE` clause
 
-#### Exercise 1 
+#### **Exercise 1** 
 
 * A. Begin by calculating the average life expectancy across all countries for 2015.
 
@@ -64,6 +64,7 @@ ORDER BY urbanarea_pop DESC;
 
 
 ### Within `SELECT` clause
+#### **Exercise 2** 
 
 * Convert the `GROUP BY` code to use a subquery inside of `SELECT` by filling in the blanks to get a result that matches the one given using the `GROUP BY` code in the first query.
 
@@ -89,6 +90,8 @@ ORDER BY cities_num DESC, country
 LIMIT 9;
 ```
 
+### Within `FROM` clause
+#### **Exercise 3** 
 
 
 
