@@ -6,4 +6,6 @@ credentials::set_github_pat("R:GITHUB_PAT")
 
 usethis::edit_r_environ()
 
-# test
+# Add commits to a previous date 
+
+git commit --date="10 day ago" -m "Your commit message" 
