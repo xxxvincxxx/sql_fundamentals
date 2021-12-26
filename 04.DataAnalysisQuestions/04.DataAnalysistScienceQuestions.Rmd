@@ -86,8 +86,6 @@ A confounding variable is a factor that affects both the dependent and independe
 
 For example, there is a high correlation between ice cream purchases and forest fires. The number of forest fires and ice cream sales increases at the same time. This is because the confounding variable between them is heat. As temperature rises, so does ice cream sales and the risk of forest fires.
 
-&nbsp;
-
 #### Logistic Regression
 
 * Basically a Classification 
