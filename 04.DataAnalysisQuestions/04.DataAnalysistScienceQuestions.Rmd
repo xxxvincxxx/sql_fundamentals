@@ -10,7 +10,16 @@ output: github_document
 1. Measures of **Center** (Mean, Median, Mode)
 
    - Mean: the average of our data points
-   - Median: the middle point of our sorted data points
+   - Median: the middle point of our **sorted** data points
+   
+```{r, echo = T}
+# Create the vector.
+x <- c(12,7,3,4.2,18,2,54,-21,8,-5)
+# Find the median.
+median.result <- median(x)
+print(median.result)
+```
+
    - Mode: the most frequent number in our data points
 
 If the data is normally distributed, then the values of mean, median, and mode are all identical, as you can see in the middle image above. If the data distribution is left-skewed, then the mean will be lower than the median. Meanwhile, if the data distribution is right-skewed, then the mean will be higher than the median.
@@ -18,8 +27,8 @@ If the data is normally distributed, then the values of mean, median, and mode a
 2. Measures of **Spread** (Standard Deviation and Variance)
 
   - Range
-  - Variance
-  - Standard Deviation
+  - Variance: The advantage of variance is that it treats all deviations from the mean as the same regardless of their direction
+  - Standard Deviation: -> square root
   
 3. **Correlation Coefficient**
 
@@ -110,12 +119,19 @@ After this, you can say that the alternative hypothesis is again a statistical p
   - Parametric -> yes assumption.
      - Z-Test: on proportions. 
      - T-test: T-test is used when the standard deviation is unknown and the sample size is comparatively small.
-      - Chi-Square Test for Independence: These tests are used to find out the significance of the association between categorical variables in the population sample.
-      - Welch’s T-test: This test is used to find out the test for equality of means between two population samples.
   - Non-parametric -> no assumptions on the parameters.
        - **1-sample Wilcoxon** signed rank test. With this test, you also estimate the population median and compare it to a reference/target value. However, the test assumes your data comes from a symmetric distribution (like the Cauchy distribution or uniform distribution).
        - **Mann-Whitney test** Use this test to compare differences between two independent groups when dependent variables are either ordinal or continuous.
-  - Bayesian
+
+### Bayesian Testing
+
+  - Bayes Theorem: It calculates the degree of belief in a certain event and gives a probability of the occurrence of some statistical problem.
+
+$$ 
+p(\theta | D) = \frac{p(D|\theta) p(\theta)} {p(D)
+$$
+
+
 
 
 
