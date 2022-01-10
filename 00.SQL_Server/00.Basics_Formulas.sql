@@ -37,3 +37,26 @@ FROM
 WHERE 
   description = 'Vandalism';
   
+  
+-- limiting
+-- Select description and affected customers
+
+SELECT 
+  nerc_region, 
+  demand_loss_mw 
+FROM 
+  grid 
+  -- Retrieve rows where the event_date was the 22nd December, 2013    
+WHERE 
+  affected_customers >= 500000;
+
+-- limiting for dates
+-- Select description and affected customers
+SELECT 
+  description, 
+  affected_customers 
+FROM 
+  grid 
+  -- Retrieve rows where the event_date was the 22nd December, 2013    
+WHERE 
+  event_date = '2013-12-22';
