@@ -12,7 +12,13 @@ output:
 1. Measures of **Center** (Mean, Median, Mode)
 
    - Mean: the average of our data points
-   - Median: the middle point of our **sorted** data points
+   
+   $$  \overline x  = \frac{{\sum\limits_{i = 1}^n {{x_i}} }}{n}
+   $$
+   
+   - Median: the middle point of our **sorted** data points.
+
+To find the median, arrange the data in ascending/ descending order from least to greatest or greatest to least value. A median is a number that separates the upper and lower halves of a data sample, population, or probability distribution.
    
 ```{r, echo = T}
 # Create the vector.
@@ -110,6 +116,8 @@ The statistical significance of an insight is determining the odds of the result
 If the p-value is less than alpha, the null hypothesis is rejected, but if it is greater than alpha, the null hypothesis is accepted. The rejection of the null hypothesis indicates that the results obtained are statistically significant.
 
 * **Sample size**
+
+* **Degrees of Freedom**
 
 * **Selection bias**
 Selection bias is a phenomenon that involves the selection of individual or grouped data in a way that is **not considered to be random**. 
