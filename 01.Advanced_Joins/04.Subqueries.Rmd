@@ -5,7 +5,9 @@ output: html_notebook
 
 ## Nested Queries
 
-### 1. Within `WHERE` clause
+### Within `WHERE` clause
+
+#### Subquery inside where
 
 ```{sql eval=FALSE}
 ```
