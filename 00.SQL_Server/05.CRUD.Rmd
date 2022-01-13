@@ -75,6 +75,25 @@ FROM
 
 ### 3. `UPDATE` statement
 
+```{sql eval=FALSE}
+-- Select the album
+SELECT 
+  title 
+FROM 
+  album 
+WHERE 
+  album_id = 213;
+-- UPDATE the album table
+UPDATE 
+  album 
+-- SET the new title  
+SET 
+  title = 'Pure Cult: The Best Of The Cult' 
+WHERE 
+  album_id = 213;
+```
+
+
 ### 4. `DELETE` statement
 
 
