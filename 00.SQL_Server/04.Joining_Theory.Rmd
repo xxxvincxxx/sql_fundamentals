@@ -52,3 +52,31 @@ INNER JOIN artist on album.artist_id = artist.artist_id;
 * RIGHT JOIN results: RIGHT JOINS are similar to LEFT joins. The difference is that all rows from the right hand table are returned, plus any matches from the left hand table. Any non-matched rows in the left hand table will return a NULL value.
 
 
+## UNION & UNION ALL
+
+* UNION excludes duplicate rows; same order, same, data types. **discards duplicates** (maybe faster!)
+* UNION ALL, takes everything. Both queries + duplicates.
+
+```{sql eval=FALSE}
+SELECT 
+  album_id AS ID,
+  title AS description,
+  'Album' AS Source
+  -- Complete the FROM statement
+FROM album
+  -- Combine the result set using the relevant keyword
+UNION
+SELECT 
+  artist_id AS ID,
+  name AS description,
+  'Artist'  AS Source
+  -- Complete the FROM statement
+FROM artist;
+```
+
+
+
+
+
+
+
