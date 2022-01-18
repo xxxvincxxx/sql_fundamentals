@@ -1,0 +1,6 @@
+---
+title: "Summarizing and aggregating numeric data"
+output: github_document
+---
+
+## Casting
