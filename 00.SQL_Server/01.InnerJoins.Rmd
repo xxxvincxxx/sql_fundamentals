@@ -15,10 +15,15 @@ output: github_document
 add stuff
 ```
 
-## Self-ish joins, just in CASE
+## "Self-join" & `CASE`
 
-You can also embed plots, for example:
+* A table joined with it-self
+* ... compare values in a field within the same table
 
 ```{sql eval=FALSE}
-add stuff
+  CASE WHEN indep_year < 1900 THEN 'before 1900'
+       WHEN indep_year <= 1930 THEN 'between 1900 and 1930' END
+       ELSE "after" END
+       AS something_name column
+
 ```
