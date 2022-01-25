@@ -4,4 +4,3 @@ output: github_document
 ---
 
 ## Motivation
-# test for randomization
