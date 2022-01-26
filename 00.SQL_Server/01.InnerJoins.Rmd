@@ -3,10 +3,6 @@ title: "Inner join"
 output: github_document
 ---
 
-```{sql eval=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## Inner Join
 
 ...
@@ -23,6 +19,6 @@ add stuff
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{sql eval=FALSE}
+add stuff
 ```
