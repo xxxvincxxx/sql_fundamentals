@@ -103,6 +103,5 @@ FROM languages
 WHERE countries.name LIKE 'V%' OR countries.name IS NULL
 -- Order by ascending countries.name
 Order by countries.name;
-
 ```
 
