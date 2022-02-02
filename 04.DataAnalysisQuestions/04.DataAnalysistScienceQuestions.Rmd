@@ -103,6 +103,15 @@ A/B testing is the statistical hypothesis testing for a randomized experiment wi
 
 -> not a "probability" but a *decision rule*.
 
+* **Statistical Significance**
+
+It essentially helps to assess the statistical significance of insight by determining the odds of the results occurring **by chance**. The first thing is to know the null hypothesis and then state it. Then the p-value is calculated, and if the null hypothesis is true, other values are also determined. 
+
+If the p-value is less than alpha, the null hypothesis is rejected, but if it is greater than alpha, the null hypothesis is accepted. The rejection of the null hypothesis indicates that the results obtained are statistically significant.
+
+* **Sample size**
+
+
 * **Confidence interval**
 
 A confidence interval is a probability that the true population parameter falls between a range of two estimates.
