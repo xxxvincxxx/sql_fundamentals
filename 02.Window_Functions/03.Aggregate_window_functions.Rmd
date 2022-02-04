@@ -10,5 +10,23 @@ output: github_document
 * You can use both `MAX` and `SUM`, as well as the other aggregate functions `COUNT`, `MIN`, and `AVG`, as window functions
 
 ## SUM Window function: **Running Totals** ❤️
+ * boh?
+```{sql eval=FALSE}
+-- basically a TEMP table
+WITH Athlete_Medals AS (
+  SELECT
+    Athlete, COUNT(*) AS Medals
+  FROM Summer_Medals
+  WHERE
+    Country = 'USA' AND Medal = 'Gold'
+    AND Year >= 2000
+  GROUP BY Athlete)
 
-* TEST
+-- running calculation
+  -- Calculate the running total of athlete medals
+  Athlete,
+  Medals,
+  SUM(Medals) OVER (ORDER BY Athlete ASC) AS Max_Medals
+FROM Athlete_Medals
+ORDER BY Athlete ASC;
+```
