@@ -141,6 +141,8 @@ FROM Tennis_Gold
 ORDER BY Gender ASC, Year ASC;
 ```
 
+##### Exercise 2 - Reigning champions by gender and event
+
 
 
 
