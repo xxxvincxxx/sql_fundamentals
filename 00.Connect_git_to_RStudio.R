@@ -14,3 +14,27 @@ usethis::edit_r_environ()
 
 nocturne_momorize_op15_3 <- sample(1:21, 1)
 print(nocturne_momorize_op15_3)
+
+* Evaluate a chunk with sql without executing it 
+
+```{sql eval=FALSE}
+```
+
+* BACKSLASH
+Fn + > =>> “`”
+
+* New line in RMarkdown
+
+&nbsp;
+
+* Back in time commit
+
+git commit --date="25 day ago" -m “some message”
+
+* Back in time commit + random date within 120 days 
+
+git commit --date="$(( $RANDOM % 120 )) days ago" -m “add subqueries in GitHub Markdown”
+
+
+
+
