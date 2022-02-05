@@ -26,5 +26,42 @@ The parentheses after `OVER` can be empty, just like the previous example, but t
 * ... `FOLLOWING`
 * `UNBOUNDED`
 
-test
+### Window functions vs GROUP BY?
+
+* Unlike `GROUP BY` results, window functions don't reduce the number of rows in the output.
+* This is true. `GROUP BY` functions summarize data, whereas window functions don't affect the number of rows in the output.
+
+### Numbering rows
+
+The simplest application for window functions is numbering rows. Numbering rows allows you to easily fetch the `nth` row. 
+
+* Number each row in the dataset.
+
+```{sql eval=FALSE}
+SELECT
+  *,
+  -- Assign numbers to each row
+  ROW_NUMBER() OVER() AS Row_N
+FROM Summer_Medals
+ORDER BY Row_N ASC;
+```
+
+* Assign a number to each year in which Summer Olympic games were held.
+
+```{sql eval=FALSE}
+SELECT
+  Year,
+  -- Assign numbers to each year
+  ROW_NUMBER() OVER() AS Row_N
+FROM (
+  SELECT DISTINCT year
+  FROM Summer_Medals
+  ORDER BY Year ASC
+) AS Years
+ORDER BY Year ASC;
+```
+
+
+
+
 
