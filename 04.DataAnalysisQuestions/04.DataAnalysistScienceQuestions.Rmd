@@ -1,6 +1,8 @@
 ---
 title: "Data Analysis / Science Interview Questions"
-output: github_document
+output:
+  github_document:
+    pandoc_args: --webtex
 ---
 
 ### Statistics and Probability
@@ -127,11 +129,7 @@ After this, you can say that the alternative hypothesis is again a statistical p
 
   - Bayes Theorem: It calculates the degree of belief in a certain event and gives a probability of the occurrence of some statistical problem.
 
-$$ 
-p(\theta | D) = \frac{p(D|\theta) p(\theta)} {p(D)
-$$
-
-
+$$ equation $$
 
 
 
