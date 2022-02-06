@@ -127,9 +127,10 @@ After this, you can say that the alternative hypothesis is again a statistical p
 
 ### Bayesian Testing
 
-  - Bayes Theorem: It calculates the degree of belief in a certain event and gives a probability of the occurrence of some statistical problem.
+  - Bayes Theorem: It calculates the degree of belief in a certain event and gives a probability of the occurrence of some statistical problem
 
-$$ equation $$
+$$ p(\theta | D) = \frac{p(D|\theta) p(\theta)} {p(D)} $$
 
-
+* Bayesian A/B testing can reduce required sample size **by 75%**.
+* 
 
