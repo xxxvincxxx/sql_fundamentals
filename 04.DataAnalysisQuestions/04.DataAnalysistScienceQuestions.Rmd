@@ -87,7 +87,6 @@ A/B testing is the statistical hypothesis testing for a randomized experiment wi
 
 -> not a "probability" but a *decision rule*.
 
-
 * **Confidence interval**
 
 A confidence interval is a probability that the true population parameter falls between a range of two estimates.
@@ -98,26 +97,21 @@ The level of confidence (for example, 95% or 99%) refers to the certainty that t
 
 * **Power of the Test**
 
+A test's power is the probability of correctly rejecting the null hypothesis when it is false
+
 * **H0 vs. H1**?
 
 H0 is a statistical phenomenon that is used to test for possible rejection under the assumption that result of chance would be true.
 
 After this, you can say that the alternative hypothesis is again a statistical phenomenon which is contrary to the Null Hypothesis. Usually, it is considered that the observations are a result of an effect with some chance of variation.
 
-* What is the difference between 1-Sample T-test, and 2-Sample T-test?
-
-  - T-Tests for comparing **means**. Each test that you perform on your sample data, brings down your sample data to a single value i.e. T-value.
-
-Types of tests:
-
-  - T-test: T-test is used when the standard deviation is unknown and the sample size is comparatively small.
-  - Chi-Square Test for Independence: These tests are used to find out the significance of the association between categorical variables in the population sample.
-  - Analysis of Variance (ANOVA): This kind of hypothesis testing is used to analyze differences between the means in various groups. This test is often used similarly to a T-test but, is used for more than two groups.
-  - Welch’s T-test: This test is used to find out the test for equality of means between two population samples.
-
-Types of tests:
-
+* Types of tests:
+  
   - Parametric -> yes assumption.
+     - Z-Test: on proportions. 
+     - T-test: T-test is used when the standard deviation is unknown and the sample size is comparatively small.
+      - Chi-Square Test for Independence: These tests are used to find out the significance of the association between categorical variables in the population sample.
+      - Welch’s T-test: This test is used to find out the test for equality of means between two population samples.
   - Non-parametric -> no assumptions on the parameters.
        - **1-sample Wilcoxon** signed rank test. With this test, you also estimate the population median and compare it to a reference/target value. However, the test assumes your data comes from a symmetric distribution (like the Cauchy distribution or uniform distribution).
        - **Mann-Whitney test** Use this test to compare differences between two independent groups when dependent variables are either ordinal or continuous.
