@@ -85,7 +85,7 @@ For example, there is a high correlation between ice cream purchases and forest 
 
 &nbsp;
 
-#### A/B Testing
+### A/B Testing
 
 A/B testing is the statistical hypothesis testing for a randomized experiment with two variables A and B. 
 
